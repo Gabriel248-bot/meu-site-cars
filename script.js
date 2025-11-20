@@ -1,4 +1,3 @@
-/* Frases */
 const botao = document.getElementById("botao");
 const mensagem = document.getElementById("mensagem");
 
@@ -16,18 +15,16 @@ botao.addEventListener("click", () => {
   mensagem.textContent = frases[aleatorio];
 });
 
-/* Abas */
+// Controle das abas
 const botoesAbas = document.querySelectorAll(".aba-btn");
 const abas = document.querySelectorAll(".aba");
 const instrucao = document.getElementById("instrucao");
 
 botoesAbas.forEach(btn => {
   btn.addEventListener("click", () => {
-
-    // some com a instrução
-    instrucao.style.display = "none";
-
     const alvo = btn.dataset.aba;
+
+    instrucao.classList.remove("ativa");
 
     abas.forEach(aba => aba.classList.remove("ativa"));
 
