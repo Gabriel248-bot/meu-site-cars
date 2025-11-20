@@ -1,122 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Relâmpago McQueen ⚡</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relâmpago McQueen ⚡ — Fan Site</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik+Mono+One&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- favicon: se quiser usar os que geramos no /mnt/data, atualize aqui -->
+  <!-- <link rel="icon" href="/mnt/data/favicon-32.png"> -->
 </head>
-
 <body>
-  <header>
-    <img src="logo95.png.png" alt="Logo Relâmpago McQueen" class="logo">
-    <h1>Relâmpago McQueen</h1>
-    <p class="sub">"KA-CHOW!" – O carro mais veloz e estiloso da Pixar!</p>
+  <header class="site-header">
+    <div class="header-row">
+      <!-- Logo: caminho do upload -->
+      <img id="logo95" class="logo" src='/mnt/data/A_2D_digital_graphic_design_features_the_number_"9.png' alt="Logo 95">
 
-    <nav>
+      <div class="title-area">
+        <h1 class="site-title">Relâmpago McQueen</h1>
+        <p class="site-sub">"KA-CHOW!" – O carro mais veloz e estiloso da Pixar</p>
+      </div>
+
+      <div class="header-actions">
+        <button id="darkToggle" class="icon-btn" aria-pressed="false" title="Alternar tema">🌙</button>
+        <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mainNav" class="main-nav" aria-label="Navegação principal">
+      <button class="aba-btn" data-aba="instrucao">Início</button>
       <button class="aba-btn" data-aba="historia">História</button>
       <button class="aba-btn" data-aba="caracteristicas">Características</button>
       <button class="aba-btn" data-aba="curiosidades">Curiosidades</button>
       <button class="aba-btn" data-aba="copapistao">Copa Pistão</button>
-      <button class="aba-btn" data-aba="king">Carro 43 – The King</button>
+      <button class="aba-btn" data-aba="rei">Carro 43 – The King</button>
+      <button class="aba-btn" data-aba="galeria">Galeria</button>
     </nav>
   </header>
 
-  <main>
-    <img src="imagem mcqueen.png" class="mcqueen" alt="Relâmpago McQueen">
+  <main class="container">
+    <!-- imagem animada McQueen -->
+    <div class="hero-wrap">
+      <img src="imagem_mcqueen.png" alt="Relâmpago McQueen" class="mcqueen" id="mcqueenAnim">
+    </div>
 
-    <!-- INSTRUÇÃO INICIAL -->
+    <!-- SEÇÕES/ABAS -->
     <section id="instrucao" class="aba ativa">
-      <h2>Bem-vindo ao Mundo do McQueen! ⚡</h2>
-      <p>Clique em uma das abas acima para conhecer tudo sobre o Relâmpago McQueen!</p>
+      <h2>Bem-vindo ao fan site do McQueen! 🏁</h2>
+      <p>Clique em uma aba acima para explorar a história, a Copa Pistão, a galeria e tudo sobre os personagens.</p>
     </section>
 
-    <!-- HISTÓRIA -->
-    <section id="historia" class="aba">
-      <h2>História do Relâmpago McQueen</h2>
-      <p>
-        Relâmpago McQueen começou sua carreira como um carro de corrida jovem,
-        impulsivo e cheio de confiança. Durante sua jornada, aprendeu sobre amizade,
-        humildade e que vencer nem sempre é o mais importante.
-      </p>
-      <p>
-        Em Radiator Springs, ele encontrou amigos como Mate, Sally e Doc Hudson,
-        que mudaram completamente sua visão de mundo.
-      </p>
+    <section id="historia" class="aba" aria-hidden="true">
+      <h2>História</h2>
+      <p>Relâmpago McQueen começou como um jovem piloto ambicioso que sonhava em vencer a Copa Pistão. Sua jornada em Radiator Springs o transformou: aprendeu amizade, humildade e que ser campeão vai além das vitórias.</p>
     </section>
 
-    <!-- CARACTERÍSTICAS -->
-    <section id="caracteristicas" class="aba">
+    <section id="caracteristicas" class="aba" aria-hidden="true">
       <h2>Características</h2>
-      <p>🏎️ Modelo: Carro de corrida Stock Car</p>
-      <p>⚡ Número: 95</p>
-      <p>🔥 Motor super potente</p>
-      <p>😎 Confiante, carismático e às vezes metido</p>
+      <ul>
+        <li>🏎 Modelo: Stock Car inspirado em NASCAR</li>
+        <li>⚡ Número: 95</li>
+        <li>😎 Carismático, competitivo e motivado</li>
+      </ul>
     </section>
 
-    <!-- CURIOSIDADES -->
-    <section id="curiosidades" class="aba">
+    <section id="curiosidades" class="aba" aria-hidden="true">
       <h2>Curiosidades</h2>
-      <p>⚡ “Ka-chow!” é seu bordão oficial.</p>
-      <p>🏁 Inspirado em carros NASCAR.</p>
-      <p>🎬 Nome inspirado no ator Steve McQueen.</p>
-      <p>🚗 Aprendeu muito em Radiator Springs.</p>
+      <ul>
+        <li>⚡ Bordão: "Ka-chow!"</li>
+        <li>🎬 Nome inspirado em Steve McQueen</li>
+        <li>🎨 A paleta e estilo dos carros foram pensados para serem icônicos nas telas</li>
+      </ul>
     </section>
 
-    <!-- COPA PISTÃO -->
-    <section id="copapistao" class="aba">
+    <section id="copapistao" class="aba" aria-hidden="true">
       <h2>Copa Pistão</h2>
-      <p>
-        A Copa Pistão é a competição mais famosa e prestigiada do universo *Carros*. 
-        É onde os melhores corredores do mundo se enfrentam em provas cheias de adrenalina.
-      </p>
-      <p>
-        McQueen se tornou um dos nomes mais lendários da Copa Pistão, graças à sua velocidade
-        e à sua evolução como piloto dentro e fora das pistas.
-      </p>
+      <p>A Copa Pistão é o campeonato mais prestigiado do universo de Carros, reunindo os melhores pilotos. McQueen cresceu e se tornou lenda lá — mas também aprendeu que honra e amizade valem mais que troféus.</p>
       <ul>
-        <li>🏆 Campeonato mais importante</li>
-        <li>🚦 Participam apenas os melhores corredores</li>
-        <li>🔧 Exige equipes completas e estratégicas</li>
-        <li>⚡ McQueen brilhou diversas vezes no torneio</li>
+        <li>🏆 Campeonato de ponta</li>
+        <li>🔧 Equipes com mecânicos e estratégias</li>
+        <li>⚠️ Provas perigosas que exigem experiência</li>
       </ul>
     </section>
 
-    <!-- CARRO 43 - THE KING -->
-    <section id="king" class="aba">
+    <section id="rei" class="aba" aria-hidden="true">
       <h2>Carro 43 — The King (Strip Weathers)</h2>
-      <p>
-        The King é o lendário carro número 43, um dos pilotos mais respeitados da Copa Pistão.
-        Experiente, humilde e extremamente profissional, ele é uma verdadeira lenda das pistas.
-      </p>
-      <p>
-        Mesmo sendo rival direto de McQueen, ele sempre demonstrou respeito e espírito esportivo.
-        Durante a corrida final, ele sofre um acidente grave, e McQueen abre mão da vitória
-        para ajudá-lo a cruzar a linha de chegada.
-      </p>
-      <p>
-        Esse momento se tornou um dos mais icônicos da história do McQueen e mudou sua vida.
-      </p>
-      <ul>
-        <li>🏁 Representa a velha guarda do automobilismo</li>
-        <li>💙 Muito respeitado por todos</li>
-        <li>🤝 Fundamental para o amadurecimento de McQueen</li>
-        <li>🏆 Inspiração de honra e caráter</li>
-      </ul>
+      <p>The King, número 43, é um veterano lendário. Mesmo rival de McQueen, mostrou ética e respeito — e teve um papel decisivo quando McQueen o ajudou após um acidente, provando que amizade supera vitórias.</p>
     </section>
 
+    <section id="galeria" class="aba" aria-hidden="true">
+      <h2>Galeria</h2>
+      <div class="gallery">
+        <img src="img/gallery1.jpg" alt="McQueen na pista">
+        <img src="img/gallery2.jpg" alt="McQueen e Mate">
+        <img src="img/gallery3.jpg" alt="Radiator Springs">
+        <img src="img/gallery4.jpg" alt="McQueen close-up">
+      </div>
+    </section>
+
+    <!-- interação (sempre visível) -->
     <section class="interacao">
       <h2>Receba uma frase do McQueen 🤣</h2>
-      <button id="botao">KA-CHOW! ⚡</button>
-      <p id="mensagem"></p>
+      <button id="botao" class="action-btn">KA-CHOW! ⚡</button>
+      <p id="mensagem" aria-live="polite"></p>
     </section>
   </main>
 
   <footer>
-    <p>Site criado por GabrielVianaINF21🏁</p>
+    <p>Site criado por GabrielViana INF21</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- SCRIPT -->
+  <script src="script.js" defer></script>
 </body>
 </html>
