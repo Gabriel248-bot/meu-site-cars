@@ -1,38 +1,70 @@
-/* CSS base — mobile first */
+/* Fundo */
 body {
   background: linear-gradient(#ff3c00, #ff9d6e);
+  font-family: 'Inter', sans-serif;
   margin: 0;
   text-align: center;
   color: #fff;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
-/* Títulos com fonte diferente */
+/* Títulos */
 h1, h2 {
   font-family: 'Rubik Mono One', sans-serif;
 }
 
-/* Logo */
 .logo {
-  width: 60px;
+  width: 80px;
   height: auto;
-  margin-bottom: 10px;
 }
 
-/* Cabeçalho */
 header {
-  padding: 20px;
+  padding: 30px;
   background: #b30000;
 }
 
-/* Subtítulo */
-.sub {
-  margin-top: 8px;
-  font-size: 16px;
+h1 {
+  margin: 10px 0 0 0;
+  font-size: 40px;
 }
 
+.sub {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+/* Botões */
+.aba-btn {
+  background: #ffcc00;
+  color: #b30000;
+  padding: 12px 25px;
+  border: none;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.aba-btn:hover {
+  background: #ffe066;
+  transform: scale(1.1);
+}
+
+/* Imagem */
+.mcqueen {
+  width: 70%;
+  max-width: 350px;
+  margin: 20px auto;
+  display: block;
+  filter: drop-shadow(0 0 10px #000);
+}
+
+/* Instrução */
 .instrucao {
   background: #ffcc00;
   color: #b30000;
@@ -45,78 +77,46 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Botões de aba */
-nav {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.aba-btn {
-  background: #ffcc00;
-  color: #b30000;
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.2s;
-}
-
-.aba-btn:hover {
-  background: #ffe066;
-  transform: scale(1.05);
-}
-
-/* Imagem do McQueen */
-.mcqueen {
-  width: 90%;
-  max-width: 300px;
-  margin: 20px 0;
-  filter: drop-shadow(0 0 10px #000);
-}
-
-/* Seções de conteúdo das abas */
+/* Abas */
 .aba {
   display: none;
-  padding: 15px;
-  max-width: 90%;
+  padding: 20px;
+  max-width: 600px;
   margin: auto;
+  text-align: left;
+  color: #fff;
 }
 
-.ativa {
+.aba.ativa {
   display: block;
 }
 
 /* Interação */
 .interacao {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
-button#botao {
-  padding: 12px 30px;
+#botao {
+  padding: 15px 35px;
   background: #ffcc00;
   color: #b30000;
   border: none;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 12px;
+  font-size: 22px;
   cursor: pointer;
   transition: 0.2s;
+  font-weight: bold;
 }
 
-button#botao:hover {
-  background: #ffe066;
+#botao:hover {
   transform: scale(1.1);
+  background: #ffe066;
 }
 
 #mensagem {
-  font-size: 20px;
-  margin-top: 15px;
+  font-size: 26px;
   font-weight: bold;
-  color: #fff;
+  margin-top: 15px;
 }
 
 /* Rodapé */
@@ -126,69 +126,19 @@ footer {
   margin-top: 40px;
 }
 
-/* Media queries para telas médias (tablets) */
-@media (min-width: 600px) {
-  body {
-    font-size: 18px;
-  }
-
+/* Responsividade */
+@media (max-width: 600px) {
   h1 {
-    font-size: 44px;
-  }
-
-  .logo {
-    width: 80px;
-  }
-
-  .mcqueen {
-    max-width: 400px;
+    font-size: 32px;
   }
 
   .aba-btn {
-    font-size: 18px;
-    padding: 12px 25px;
+    font-size: 16px;
+    padding: 10px 20px;
   }
 
-  button#botao {
-    font-size: 20px;
-    padding: 15px 35px;
-  }
-
-  #mensagem {
-    font-size: 24px;
+  .instrucao {
+    font-size: 16px;
+    padding: 12px;
   }
 }
-
-/* Media queries para telas maiores (desktop) */
-@media (min-width: 1024px) {
-  body {
-    font-size: 20px;
-  }
-
-  h1 {
-    font-size: 50px;
-  }
-
-  .logo {
-    width: 100px;
-  }
-
-  .mcqueen {
-    max-width: 500px;
-  }
-
-  .aba-btn {
-    font-size: 20px;
-    padding: 15px 30px;
-  }
-
-  button#botao {
-    font-size: 22px;
-    padding: 15px 35px;
-  }
-
-  #mensagem {
-    font-size: 26px;
-  }
-}
-
