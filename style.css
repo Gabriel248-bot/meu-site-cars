@@ -1,182 +1,168 @@
-/* =============================== */
-/* BASE DO SITE */
+/* ============================
+   STYLE - App-like, responsive
+   ============================ */
+
+/* Reset mínimo */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+/* Variáveis */
+:root{
+  --bg1: #ff3c00;
+  --bg2: #ff9d6e;
+  --brand: #b30000;
+  --accent: #ffcc00;
+  --accent-2: #ffe066;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.9);
+}
+
+/* Dark mode variables for body.dark (toggled by JS) */
+body.dark {
+  --bg1: #141414;
+  --bg2: #2b2b2b;
+  --brand: #ff4d4d;
+  --accent: #ffb84d;
+  --accent-2: #ffd39b;
+  --text: #eaeaea;
+  --muted: rgba(234,234,234,0.9);
+}
+
+/* Body and layout */
 body {
-  background: linear-gradient(#ff3c00, #ff9d6e);
   font-family: 'Inter', sans-serif;
-  margin: 0;
-  text-align: center;
-  color: #fff;
-}
-
-h1, h2 {
-  font-family: 'Rubik Mono One', sans-serif;
-}
-
-/* =============================== */
-/* HEADER */
-header {
-  padding: 25px 10px;
-  background: #b30000;
-}
-
-.logo {
-  width: 70px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  margin: 10px 0;
-}
-
-.sub {
-  font-size: 16px;
-  margin-top: 8px;
-}
-
-/* =============================== */
-/* NAVEGAÇÃO */
-nav {
-  margin-top: 20px;
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(90deg, rgba(0,0,0,0.08), rgba(0,0,0,0.02));
+  border-bottom: 2px solid rgba(0,0,0,0.08);
+}
+.header-row {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
   gap: 12px;
+  padding: 14px 16px;
 }
+.logo { width: 72px; height: auto; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.25); transform-origin: center; transition: transform .25s ease; }
+.logo:hover { transform: rotate(-6deg) scale(1.02); }
 
+.title-area { flex: 1; text-align: left; }
+.site-title { font-family: 'Bangers', cursive; font-size: 28px; color: var(--text); text-shadow:0 3px 12px rgba(0,0,0,0.35); }
+.site-sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+/* header actions */
+.header-actions { display:flex; gap:8px; align-items:center; }
+.icon-btn { background: transparent; border-radius: 8px; padding: 8px; border: 1px solid transparent; color:var(--text); cursor:pointer; font-size:18px; }
+.icon-btn:focus { outline: 3px solid rgba(255,255,255,0.08); outline-offset: 2px; }
+
+/* hamburger */
+.hamburger { width:44px; height:38px; display:flex; align-items:center; justify-content:center; background:transparent; border:none; cursor:pointer; }
+.hamburger span { display:block; width:22px; height:2px; background:var(--text); margin:3px 0; border-radius:2px; transition: transform .18s ease, opacity .18s ease; }
+
+/* nav */
+.main-nav {
+  max-width:1100px;
+  margin: 6px auto 0 auto;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  padding:10px 12px 14px;
+  flex-wrap:wrap;
+}
 .aba-btn {
-  background: #ffcc00;
-  color: #b30000;
-  padding: 12px 22px;
+  background: var(--accent);
+  color: var(--brand);
+  padding: 10px 16px;
+  border-radius: 12px;
   border: none;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.2s;
+  font-weight: 700;
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
 }
+.aba-btn:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.18); }
 
-.aba-btn:hover {
-  background: #ffe066;
-  transform: scale(1.05);
-}
+/* main container */
+.container { max-width:1100px; margin: 18px auto; width: 94%; display:flex; flex-direction:column; gap:18px; }
 
-/* =============================== */
-/* IMAGEM */
-.mcqueen {
-  width: 90%;
-  max-width: 350px;
-  margin: 25px auto;
-  display: block;
-  filter: drop-shadow(0 0 10px #000);
-}
+/* hero / mcqueen animation area */
+.hero-wrap { display:flex; justify-content:center; align-items:center; }
+.mcqueen { width: 90%; max-width: 520px; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.35); transition: transform .6s cubic-bezier(.2,.9,.3,1); cursor: default; }
 
-/* =============================== */
-/* CONTEÚDO */
-.aba {
-  display: none;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 15px;
-  padding: 20px;
-  max-width: 650px;
-  margin: 20px auto;
-}
-
-.ativa {
-  display: block;
-}
-
-/* =============================== */
-/* INTERAÇÃO */
-.interacao button {
-  background: #ffcc00;
-  color: #b30000;
-  padding: 15px 25px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* =============================== */
-/* FOOTER */
-footer {
-  margin-top: 40px;
-  padding: 15px;
-  background: #b30000;
-}
-
-
-/* =============================== */
-/* RESPONSIVIDADE REAL */
-/* =============================== */
-
-/* Tablets e celulares grandes */
-@media (max-width: 768px) {
-
-  header {
-    padding: 18px 10px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .mcqueen {
-    max-width: 250px;
-    width: 80%;
-  }
-
-  .aba {
-    max-width: 90%;
-    padding: 15px;
-  }
-
-  nav {
-    gap: 8px;
-  }
-
-  .aba-btn {
-    padding: 10px 15px;
-    font-size: 15px;
+/* small continuous movement for fun on wide screens */
+@media(min-width:900px){
+  #mcqueenAnim { animation: floatMove 6s ease-in-out infinite; }
+  @keyframes floatMove {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(-1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
   }
 }
 
-/* CELULAR — esse é o que corrige TUDO */
-@media (max-width: 480px) {
+/* sections */
+.aba { display:none; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); padding: 18px; border-radius: 14px; box-shadow: 0 12px 30px rgba(0,0,0,0.2); color:var(--text); }
+.aba.ativa { display:block; animation: enterSection .36s ease; }
+@keyframes enterSection { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
 
-  /* Título ajustado */
-  h1 {
-    font-size: 26px;
-    line-height: 1.2;
-  }
+/* lists */
+ul { margin-top:8px; padding-left:18px; color:var(--text); }
+li { margin-bottom:8px; }
 
-  /* Navegação vira BLOCO empilhado */
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+/* gallery */
+.gallery { display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; margin-top:12px; }
+.gallery img { width:100%; height:140px; object-fit:cover; border-radius:10px; transition: transform .18s ease, box-shadow .18s ease; }
+.gallery img:hover { transform: scale(1.03); box-shadow: 0 10px 28px rgba(0,0,0,0.32); }
 
-  .aba-btn {
-    width: 80%;
-    max-width: 250px;
-    font-size: 14px;
-    padding: 10px 15px;
-  }
+/* interaction button */
+.interacao { text-align:center; margin: 6px auto 34px auto; }
+.action-btn { background: var(--accent); color: var(--brand); padding:12px 26px; border-radius:12px; border:none; font-weight:800; cursor:pointer; }
 
-  /* Imagem */
-  .mcqueen {
-    width: 85%;
-    max-width: 200px;
-  }
+/* message */
+#mensagem { margin-top: 12px; font-weight:700; }
 
-  /* Conteúdo */
-  .aba {
-    font-size: 15px;
-    line-height: 1.4;
-  }
+/* footer */
+footer { text-align:center; padding:18px 8px; color:var(--muted); background: transparent; }
 
-  .aba h2 {
-    font-size: 20px;
-  }
+/* focus accessibility */
+button:focus { outline: 3px solid rgba(255,255,255,0.08); outline-offset: 2px; }
+
+/* responsive specifics */
+
+/* medium screens */
+@media (min-width:700px) {
+  .title-area { text-align:left; }
+  .site-title { font-size: 42px; }
+  .mcqueen { max-width: 720px; }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* small screens - mobile layout */
+@media (max-width:699px) {
+  .header-row { padding: 12px; gap: 8px; }
+  .logo { width:56px; }
+  .site-title { font-size: 22px; }
+  .main-nav { gap:8px; padding:8px; display:flex; flex-direction:column; align-items:center; }
+  .aba-btn { width: 92%; max-width: 300px; font-size:15px; }
+  .gallery img { height:120px; }
+  .mcqueen { max-width: 320px; width: 88%; }
+}
+
+/* smallest phones */
+@media (max-width:420px) {
+  .site-title { font-size:20px; }
+  .logo { width:50px; }
+  .aba-btn { padding:10px 12px; font-size:14px; }
+  .gallery img { height:100px; }
+  .mcqueen { max-width: 260px; }
 }
