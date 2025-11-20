@@ -1,4 +1,3 @@
-/* Fundo */
 body {
   background: linear-gradient(#ff3c00, #ff9d6e);
   font-family: 'Inter', sans-serif;
@@ -7,138 +6,76 @@ body {
   color: #fff;
 }
 
-/* Títulos */
 h1, h2 {
   font-family: 'Rubik Mono One', sans-serif;
 }
 
 .logo {
   width: 80px;
-  height: auto;
 }
 
 header {
-  padding: 30px;
+  padding: 20px;
   background: #b30000;
-}
-
-h1 {
-  margin: 10px 0 0 0;
-  font-size: 40px;
-}
-
-.sub {
-  margin-top: 10px;
-  font-size: 18px;
 }
 
 nav {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
-/* Botões */
 .aba-btn {
   background: #ffcc00;
   color: #b30000;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border: none;
-  margin: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
+  border-radius: 12px;
   font-weight: bold;
+  cursor: pointer;
   transition: 0.2s;
 }
 
 .aba-btn:hover {
-  background: #ffe066;
   transform: scale(1.1);
+  background: #ffe066;
 }
 
-/* Imagem */
 .mcqueen {
-  width: 70%;
+  width: 80%;
   max-width: 350px;
-  margin: 20px auto;
-  display: block;
+  margin-top: 20px;
   filter: drop-shadow(0 0 10px #000);
 }
 
-/* Instrução */
-.instrucao {
-  background: #ffcc00;
-  color: #b30000;
-  padding: 15px;
-  border-radius: 12px;
-  font-size: 20px;
-  font-weight: bold;
-  max-width: 600px;
-  margin: 20px auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-/* Abas */
 .aba {
   display: none;
   padding: 20px;
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
-  text-align: left;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
 }
 
-.aba.ativa {
+.ativa {
   display: block;
 }
 
-/* Interação */
-.interacao {
-  margin-top: 40px;
-}
-
-#botao {
-  padding: 15px 35px;
+.interacao button {
+  padding: 15px 30px;
+  font-size: 20px;
   background: #ffcc00;
   color: #b30000;
-  border: none;
   border-radius: 12px;
-  font-size: 22px;
+  border: none;
   cursor: pointer;
-  transition: 0.2s;
-  font-weight: bold;
-}
-
-#botao:hover {
-  transform: scale(1.1);
-  background: #ffe066;
-}
-
-#mensagem {
-  font-size: 26px;
-  font-weight: bold;
   margin-top: 15px;
 }
 
-/* Rodapé */
 footer {
   background: #b30000;
   padding: 15px;
-  margin-top: 40px;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 32px;
-  }
-
-  .aba-btn {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  .instrucao {
-    font-size: 16px;
-    padding: 12px;
-  }
+  margin-top: 30px;
 }
