@@ -133,9 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- FRASES (botao) ---------- */
   if(botao && mensagem){
     const frases = [
-      "KA-CHOW! ⚡",
-      "Eu sou velocidade! 🏎️💨",
-      "Nunca subestime um carro vermelho! 🔥",
+      "Possante como um jato, veloz como um foguete. Eu sou velocidade! 🏎️💨",
+      "Nunca subestime um carro velho! 🔥",
       "Radiator Springs é minha casa!",
       "Eu fui feito pra correr!",
       "O Mate é meu melhor amigo... não contem pra ele."
@@ -172,3 +171,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 }); // DOMContentLoaded end
+
