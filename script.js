@@ -23,6 +23,23 @@ if (botao && mensagem) {
 /* --------------------------
         Controle das abas
 --------------------------- */
+const instrucao = document.getElementById("instrucao");
+
+botoesAbas.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // Oculta a instrução ao clicar em qualquer aba
+    if (instrucao) {
+      instrucao.style.display = "none";
+    }
+
+    const alvo = btn.dataset.aba;
+
+    abas.forEach(aba => aba.classList.remove("ativa"));
+    document.getElementById(alvo).classList.add("ativa");
+  });
+});
+
 const botoesAbas = document.querySelectorAll(".aba-btn");
 const abas = document.querySelectorAll(".aba");
 
@@ -36,3 +53,4 @@ if (botoesAbas.length > 0 && abas.length > 0) {
     });
   });
 }
+
