@@ -19,10 +19,11 @@ header {
   background: #b30000;
 }
 
+/* --- NAV (BARRA DE NAVEGAÇÃO) --- */
 nav {
   margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Mantido para telas maiores */
   justify-content: center;
   gap: 10px;
 }
@@ -81,11 +82,11 @@ footer {
 }
 
 /* ----------------------------- */
-/*   RESPONSIVIDADE PARA MOBILE  */
+/* RESPONSIVIDADE PARA MOBILE  */
 /* ----------------------------- */
 
 @media (max-width: 768px) {
-
+  
   header {
     padding: 15px;
   }
@@ -99,20 +100,19 @@ footer {
     padding: 0 10px;
   }
 
+  /* Ajuste para navegação em telas menores */
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+    margin-top: 15px;
+    gap: 8px; /* Espaçamento reduzido */
   }
 
   .aba-btn {
-    padding: 10px 18px;
-    font-size: 16px;
+    padding: 8px 15px; /* Padding reduzido */
+    font-size: 15px;
   }
 
   .mcqueen {
-    width: 70%;
+    width: 75%;
     max-width: 250px;
   }
 
@@ -133,18 +133,31 @@ footer {
 }
 
 @media (max-width: 480px) {
-
+  
   h1 {
     font-size: 26px;
   }
 
-  .aba-btn {
-    padding: 8px 14px;
-    font-size: 14px;
+  /* 🚗 SOLUÇÃO PARA A NAVEGAÇÃO QUEBRADA 🚗 */
+  nav {
+    overflow-x: auto; /* Habilita a rolagem horizontal */
+    flex-wrap: nowrap; /* IMPEDE que os itens quebrem linha */
+    justify-content: flex-start; /* Alinha no início */
+    padding-bottom: 5px; /* Espaço para a rolagem */
+    gap: 5px; /* Espaçamento ainda menor */
   }
+
+  .aba-btn {
+    flex-shrink: 0; /* Impede que os botões encolham */
+    padding: 7px 10px; /* Reduz o padding para caber mais */
+    font-size: 13px;
+  }
+  
+  /* --- FIM DA SOLUÇÃO DE NAVEGAÇÃO --- */
 
   .mcqueen {
     width: 80%;
+    max-width: 220px; /* Reduz o max-width */
   }
 
   .aba h2 {
