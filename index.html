@@ -2,16 +2,15 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relâmpago McQueen ⚡</title>
-
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik+Mono+One&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <img src="logo95.png" alt="Logo Relâmpago McQueen" class="logo">
+    <img src="logo95.png.png" alt="Logo Relâmpago McQueen" class="logo">
     <h1>Relâmpago McQueen</h1>
     <p class="sub">"KA-CHOW!" – O carro mais veloz e estiloso da Pixar!</p>
 
@@ -19,47 +18,92 @@
       <button class="aba-btn" data-aba="historia">História</button>
       <button class="aba-btn" data-aba="caracteristicas">Características</button>
       <button class="aba-btn" data-aba="curiosidades">Curiosidades</button>
+      <button class="aba-btn" data-aba="copapistao">Copa Pistão</button>
+      <button class="aba-btn" data-aba="king">Carro 43 – The King</button>
     </nav>
   </header>
 
   <main>
+    <img src="imagem mcqueen.png" class="mcqueen" alt="Relâmpago McQueen">
 
     <!-- INSTRUÇÃO INICIAL -->
-    <div id="instrucao" class="instrucao">
-      Escolha uma aba acima para começar!
-    </div>
+    <section id="instrucao" class="aba ativa">
+      <h2>Bem-vindo ao Mundo do McQueen! ⚡</h2>
+      <p>Clique em uma das abas acima para conhecer tudo sobre o Relâmpago McQueen!</p>
+    </section>
 
-    <!-- IMAGEM -->
-    <img src="imagem-mcqueen.png" class="mcqueen" alt="Relâmpago McQueen">
-
-    <!-- ABAS -->
+    <!-- HISTÓRIA -->
     <section id="historia" class="aba">
       <h2>História do Relâmpago McQueen</h2>
       <p>
         Relâmpago McQueen começou sua carreira como um carro de corrida jovem,
-        impulsivo e cheio de confiança. Durante sua jornada aprendeu sobre amizade,
+        impulsivo e cheio de confiança. Durante sua jornada, aprendeu sobre amizade,
         humildade e que vencer nem sempre é o mais importante.
       </p>
       <p>
-        Em Radiator Springs, McQueen encontrou amigos como Mate, Sally e Doc Hudson,
+        Em Radiator Springs, ele encontrou amigos como Mate, Sally e Doc Hudson,
         que mudaram completamente sua visão de mundo.
       </p>
     </section>
 
+    <!-- CARACTERÍSTICAS -->
     <section id="caracteristicas" class="aba">
       <h2>Características</h2>
       <p>🏎️ Modelo: Carro de corrida Stock Car</p>
       <p>⚡ Número: 95</p>
-      <p>🔥 Motor super potente com alta aceleração</p>
-      <p>😎 Confiante, carismático e às vezes meio metido</p>
+      <p>🔥 Motor super potente</p>
+      <p>😎 Confiante, carismático e às vezes metido</p>
     </section>
 
+    <!-- CURIOSIDADES -->
     <section id="curiosidades" class="aba">
       <h2>Curiosidades</h2>
       <p>⚡ “Ka-chow!” é seu bordão oficial.</p>
-      <p>🏁 Inspirado em carros reais da NASCAR.</p>
-      <p>🎬 Nome homenageia o ator Steve McQueen.</p>
-      <p>🚗 McQueen evolui pessoalmente ao longo da série.</p>
+      <p>🏁 Inspirado em carros NASCAR.</p>
+      <p>🎬 Nome inspirado no ator Steve McQueen.</p>
+      <p>🚗 Aprendeu muito em Radiator Springs.</p>
+    </section>
+
+    <!-- COPA PISTÃO -->
+    <section id="copapistao" class="aba">
+      <h2>Copa Pistão</h2>
+      <p>
+        A Copa Pistão é a competição mais famosa e prestigiada do universo *Carros*. 
+        É onde os melhores corredores do mundo se enfrentam em provas cheias de adrenalina.
+      </p>
+      <p>
+        McQueen se tornou um dos nomes mais lendários da Copa Pistão, graças à sua velocidade
+        e à sua evolução como piloto dentro e fora das pistas.
+      </p>
+      <ul>
+        <li>🏆 Campeonato mais importante</li>
+        <li>🚦 Participam apenas os melhores corredores</li>
+        <li>🔧 Exige equipes completas e estratégicas</li>
+        <li>⚡ McQueen brilhou diversas vezes no torneio</li>
+      </ul>
+    </section>
+
+    <!-- CARRO 43 - THE KING -->
+    <section id="king" class="aba">
+      <h2>Carro 43 — The King (Strip Weathers)</h2>
+      <p>
+        The King é o lendário carro número 43, um dos pilotos mais respeitados da Copa Pistão.
+        Experiente, humilde e extremamente profissional, ele é uma verdadeira lenda das pistas.
+      </p>
+      <p>
+        Mesmo sendo rival direto de McQueen, ele sempre demonstrou respeito e espírito esportivo.
+        Durante a corrida final, ele sofre um acidente grave, e McQueen abre mão da vitória
+        para ajudá-lo a cruzar a linha de chegada.
+      </p>
+      <p>
+        Esse momento se tornou um dos mais icônicos da história do McQueen e mudou sua vida.
+      </p>
+      <ul>
+        <li>🏁 Representa a velha guarda do automobilismo</li>
+        <li>💙 Muito respeitado por todos</li>
+        <li>🤝 Fundamental para o amadurecimento de McQueen</li>
+        <li>🏆 Inspiração de honra e caráter</li>
+      </ul>
     </section>
 
     <section class="interacao">
@@ -70,9 +114,9 @@
   </main>
 
   <footer>
-    <p>Site criado por Gabriel Viana INF21 🏁</p>
+    <p>Site criado por GabrielVianaINF21🏁</p>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
