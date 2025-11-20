@@ -1,0 +1,219 @@
+body {
+  background: linear-gradient(#ff3c00, #ff9d6e);
+  font-family: 'Bangers', cursive;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+h1, h2 {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+/* Fonte personalizada (exemplo) */
+@font-face {
+    font-family: "RacingFont";
+    src: url("fonts/racing.ttf");
+}
+
+/* Aplicando no conteúdo */
+.content {
+    font-family: "RacingFont", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;        /* Espaçamento entre linhas */
+    letter-spacing: 1.0px;   /* Espaçamento entre letras */
+    color: #222;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Cabeçalho */
+header {
+  padding: 30px;
+  background: #b30000;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+body, p, .content {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+.sub {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Menu */
+nav {
+  margin-top: 20px;
+}
+
+.aba-btn {
+  background: #ffcc00;
+  color: #b30000;
+  padding: 12px 25px;
+  border: none;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.aba-btn:hover {
+  background: #ffe066;
+  transform: scale(1.1);
+}
+
+/* Imagem */
+.mcqueen {
+  width: 300px;
+  margin: 20px 0;
+  filter: drop-shadow(0 0 10px #000);
+}
+
+/* Conteúdo das abas */
+.aba {
+  display: none;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.ativa {
+  display: block;
+}
+
+/* Interação */
+.interacao {
+  margin-top: 30px;
+}
+
+button#botao {
+  padding: 15px 35px;
+  background: #ffcc00;
+  color: #b30000;
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+button#botao:hover {
+  transform: scale(1.1);
+  background: #ffe066;
+}
+
+#mensagem {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Rodapé */
+footer {
+  background: #b30000;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+
+/* ================================
+      RESPONSIVIDADE
+================================ */
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+
+  header {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .sub {
+    font-size: 16px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .aba-btn {
+    width: 90%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .mcqueen {
+    width: 70%;
+  }
+
+  .aba {
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button#botao {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+
+  #mensagem {
+    font-size: 20px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .mcqueen {
+    width: 90%;
+  }
+
+  .aba-btn {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
